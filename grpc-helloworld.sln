@@ -1,8 +1,16 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DD2D03A-C141-4D3A-A095-97F80DD718C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldClient", "src\HelloWorldClient\HelloWorldClient.csproj", "{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldService", "src\HelloWorldService\HelloWorldService.csproj", "{585F14E7-1D2C-4C48-8D09-FC9E33293852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldServer", "src\HelloWorldServer\HelloWorldServer.csproj", "{E4E46D71-AD8E-451E-ABCB-266EA8346118}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +22,48 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|x64.ActiveCfg = Debug|x64
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|x64.Build.0 = Debug|x64
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|x86.ActiveCfg = Debug|x86
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Debug|x86.Build.0 = Debug|x86
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|x64.ActiveCfg = Release|x64
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|x64.Build.0 = Release|x64
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|x86.ActiveCfg = Release|x86
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF}.Release|x86.Build.0 = Release|x86
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|x64.ActiveCfg = Debug|x64
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|x64.Build.0 = Debug|x64
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|x86.ActiveCfg = Debug|x86
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Debug|x86.Build.0 = Debug|x86
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|x64.ActiveCfg = Release|x64
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|x64.Build.0 = Release|x64
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|x86.ActiveCfg = Release|x86
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852}.Release|x86.Build.0 = Release|x86
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|x64.ActiveCfg = Debug|x64
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|x64.Build.0 = Debug|x64
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|x86.ActiveCfg = Debug|x86
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Debug|x86.Build.0 = Debug|x86
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|x64.ActiveCfg = Release|x64
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|x64.Build.0 = Release|x64
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|x86.ActiveCfg = Release|x86
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91810269-A83F-4E7C-A1C2-B6BD01BEEDFF} = {7DD2D03A-C141-4D3A-A095-97F80DD718C7}
+		{585F14E7-1D2C-4C48-8D09-FC9E33293852} = {7DD2D03A-C141-4D3A-A095-97F80DD718C7}
+		{E4E46D71-AD8E-451E-ABCB-266EA8346118} = {7DD2D03A-C141-4D3A-A095-97F80DD718C7}
 	EndGlobalSection
 EndGlobal

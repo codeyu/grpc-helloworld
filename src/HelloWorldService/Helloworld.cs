@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace GRPCDemo {
+namespace HelloWorldService {
 
   /// <summary>Holder for reflection information generated from helloworld.proto</summary>
   public static partial class HelloworldReflection {
@@ -22,15 +22,16 @@ namespace GRPCDemo {
     static HelloworldReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBoZWxsb3dvcmxkLnByb3RvEghnUlBDRGVtbyIcCgxIZWxsb1JlcXVlc3QS",
-            "DAoEbmFtZRgBIAEoCSIdCgpIZWxsb1JlcGx5Eg8KB21lc3NhZ2UYASABKAky",
-            "QgoEZ1JQQxI6CghTYXlIZWxsbxIWLmdSUENEZW1vLkhlbGxvUmVxdWVzdBoU",
-            "LmdSUENEZW1vLkhlbGxvUmVwbHkiAGIGcHJvdG8z"));
+            "ChBoZWxsb3dvcmxkLnByb3RvEhFIZWxsb1dvcmxkU2VydmljZSIcCgxIZWxs",
+            "b1JlcXVlc3QSDAoEbmFtZRgBIAEoCSIdCgpIZWxsb1JlcGx5Eg8KB21lc3Nh",
+            "Z2UYASABKAkyWgoKSGVsbG9Xb3JsZBJMCghTYXlIZWxsbxIfLkhlbGxvV29y",
+            "bGRTZXJ2aWNlLkhlbGxvUmVxdWVzdBodLkhlbGxvV29ybGRTZXJ2aWNlLkhl",
+            "bGxvUmVwbHkiAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCDemo.HelloRequest), global::GRPCDemo.HelloRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCDemo.HelloReply), global::GRPCDemo.HelloReply.Parser, new[]{ "Message" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::HelloWorldService.HelloRequest), global::HelloWorldService.HelloRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::HelloWorldService.HelloReply), global::HelloWorldService.HelloReply.Parser, new[]{ "Message" }, null, null, null)
           }));
     }
     #endregion
@@ -44,7 +45,7 @@ namespace GRPCDemo {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GRPCDemo.HelloworldReflection.Descriptor.MessageTypes[0]; }
+      get { return global::HelloWorldService.HelloworldReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,7 +162,7 @@ namespace GRPCDemo {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GRPCDemo.HelloworldReflection.Descriptor.MessageTypes[1]; }
+      get { return global::HelloWorldService.HelloworldReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

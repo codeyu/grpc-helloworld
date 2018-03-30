@@ -10,15 +10,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
-namespace GRPCDemo {
-  public static partial class gRPC
+namespace HelloWorldService {
+  public static partial class HelloWorld
   {
-    static readonly string __ServiceName = "gRPCDemo.gRPC";
+    static readonly string __ServiceName = "HelloWorldService.HelloWorld";
 
-    static readonly grpc::Marshaller<global::GRPCDemo.HelloRequest> __Marshaller_HelloRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GRPCDemo.HelloRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::GRPCDemo.HelloReply> __Marshaller_HelloReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GRPCDemo.HelloReply.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::HelloWorldService.HelloRequest> __Marshaller_HelloRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HelloWorldService.HelloRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::HelloWorldService.HelloReply> __Marshaller_HelloReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HelloWorldService.HelloReply.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::GRPCDemo.HelloRequest, global::GRPCDemo.HelloReply> __Method_SayHello = new grpc::Method<global::GRPCDemo.HelloRequest, global::GRPCDemo.HelloReply>(
+    static readonly grpc::Method<global::HelloWorldService.HelloRequest, global::HelloWorldService.HelloReply> __Method_SayHello = new grpc::Method<global::HelloWorldService.HelloRequest, global::HelloWorldService.HelloReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SayHello",
@@ -28,68 +28,68 @@ namespace GRPCDemo {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::GRPCDemo.HelloworldReflection.Descriptor.Services[0]; }
+      get { return global::HelloWorldService.HelloworldReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of gRPC</summary>
-    public abstract partial class gRPCBase
+    /// <summary>Base class for server-side implementations of HelloWorld</summary>
+    public abstract partial class HelloWorldBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::GRPCDemo.HelloReply> SayHello(global::GRPCDemo.HelloRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::HelloWorldService.HelloReply> SayHello(global::HelloWorldService.HelloRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for gRPC</summary>
-    public partial class gRPCClient : grpc::ClientBase<gRPCClient>
+    /// <summary>Client for HelloWorld</summary>
+    public partial class HelloWorldClient : grpc::ClientBase<HelloWorldClient>
     {
-      /// <summary>Creates a new client for gRPC</summary>
+      /// <summary>Creates a new client for HelloWorld</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public gRPCClient(grpc::Channel channel) : base(channel)
+      public HelloWorldClient(grpc::Channel channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for gRPC that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for HelloWorld that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public gRPCClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public HelloWorldClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected gRPCClient() : base()
+      protected HelloWorldClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected gRPCClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected HelloWorldClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
-      public virtual global::GRPCDemo.HelloReply SayHello(global::GRPCDemo.HelloRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::HelloWorldService.HelloReply SayHello(global::HelloWorldService.HelloRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SayHello(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::GRPCDemo.HelloReply SayHello(global::GRPCDemo.HelloRequest request, grpc::CallOptions options)
+      public virtual global::HelloWorldService.HelloReply SayHello(global::HelloWorldService.HelloRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SayHello, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::GRPCDemo.HelloReply> SayHelloAsync(global::GRPCDemo.HelloRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::HelloWorldService.HelloReply> SayHelloAsync(global::HelloWorldService.HelloRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SayHelloAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::GRPCDemo.HelloReply> SayHelloAsync(global::GRPCDemo.HelloRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::HelloWorldService.HelloReply> SayHelloAsync(global::HelloWorldService.HelloRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override gRPCClient NewInstance(ClientBaseConfiguration configuration)
+      protected override HelloWorldClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new gRPCClient(configuration);
+        return new HelloWorldClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(gRPCBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(HelloWorldBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();

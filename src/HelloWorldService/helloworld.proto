@@ -1,6 +1,6 @@
 syntax = "proto3";
-package gRPCDemo;
-service gRPC {
+package HelloWorldService;
+service HelloWorld {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
 
